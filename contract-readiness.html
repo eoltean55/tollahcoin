@@ -44,6 +44,10 @@
             <h3>ABI check</h3>
             <p>`scripts/verify-abi.js` rejects unexpected mint, pause, blacklist, or fee setter functions.</p>
           </article>
+          <article class="panel">
+            <h3>Deploy tools</h3>
+            <p>`scripts/deploy-polygon.js` deploys with Elliott's treasury wallet, then `scripts/update-site-after-deploy.js` updates public links.</p>
+          </article>
         </div>
       </section>
 
@@ -75,6 +79,10 @@
           <article class="panel">
             <h3>3. Verify source</h3>
             <p>Verify on PolygonScan with Solidity `0.8.28`, optimizer enabled, and `200` optimizer runs.</p>
+          </article>
+          <article class="panel">
+            <h3>4. Update site</h3>
+            <p>Run `npm run update:site:contract` after deployment and PolygonScan verification.</p>
           </article>
         </div>
       </section>

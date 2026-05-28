@@ -5,6 +5,8 @@ This repo now includes a starter ERC-20 contract for tollahcoin:
 - Contract: `contracts/Tollahcoin.sol`
 - Tests: `test/Tollahcoin.t.sol`
 - ABI check: `scripts/verify-abi.js`
+- Deployment script: `scripts/deploy-polygon.js`
+- Site update script: `scripts/update-site-after-deploy.js`
 
 ## Intended token properties
 
@@ -29,6 +31,7 @@ This means Elliott controls the initial treasury wallet, but the contract itself
 3. Run `npm test`.
 4. Review the generated ABI and bytecode in `artifacts/`.
 5. Confirm the public website, buy guide, tokenomics page, and metadata all match the final contract.
+6. Follow `DEPLOYMENT_RUNBOOK.md` with a dedicated deployment wallet and Elliott treasury wallet.
 
 ## Deployment notes
 

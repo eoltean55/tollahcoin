@@ -8,6 +8,7 @@ For project planning, see:
 - [`TOKENOMICS_STARTER.md`](TOKENOMICS_STARTER.md): plain-English tokenomics and low-budget liquidity plan.
 - [`COMMUNITY_PLAYBOOK.md`](COMMUNITY_PLAYBOOK.md): X and chat-room outreach rules and templates.
 - [`CONTRACT_READINESS.md`](CONTRACT_READINESS.md): tested ERC-20 contract properties and deployment checklist.
+- [`DEPLOYMENT_RUNBOOK.md`](DEPLOYMENT_RUNBOOK.md): step-by-step Polygon deployment, verification, and site update process.
 
 Public site pages:
 
@@ -47,6 +48,17 @@ Install dependencies, compile, run Solidity tests, and verify the ABI:
 ```sh
 npm install
 npm test
+```
+
+Prepare a Polygon deployment with:
+
+```sh
+cp .env.example .env
+# Fill POLYGON_RPC_URL, DEPLOYER_PRIVATE_KEY, and TREASURY_ADDRESS.
+set -a
+source .env
+set +a
+npm run deploy:polygon
 ```
 
 ## Risk note
