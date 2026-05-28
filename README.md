@@ -7,6 +7,7 @@ For project planning, see:
 - [`OWNER_ROADMAP.md`](OWNER_ROADMAP.md): owner roadmap for making the coin verifiable, usable, and listing-ready.
 - [`TOKENOMICS_STARTER.md`](TOKENOMICS_STARTER.md): plain-English tokenomics and low-budget liquidity plan.
 - [`COMMUNITY_PLAYBOOK.md`](COMMUNITY_PLAYBOOK.md): X and chat-room outreach rules and templates.
+- [`CONTRACT_READINESS.md`](CONTRACT_READINESS.md): tested ERC-20 contract properties and deployment checklist.
 
 Public site pages:
 
@@ -37,6 +38,15 @@ python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
+
+## Contract checks
+
+Install dependencies, compile, run Solidity tests, and verify the ABI:
+
+```sh
+npm install
+npm test
+```
 
 ## Risk note
 
