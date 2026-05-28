@@ -2,6 +2,11 @@
 
 This roadmap is for turning tollahcoin (`$IRAN`) into a legitimate, usable project that people can verify and buy. It separates what Cursor can build from what Elliott, as owner, must decide or complete with legal, treasury, exchange, and community partners.
 
+For deeper planning, use:
+
+- [`TOKENOMICS_STARTER.md`](TOKENOMICS_STARTER.md) for a plain-English explanation of tokenomics and a small starter liquidity plan.
+- [`COMMUNITY_PLAYBOOK.md`](COMMUNITY_PLAYBOOK.md) for X and chat-room outreach rules, templates, and moderation standards.
+
 ## North star
 
 Make `$IRAN` easy to verify, hard to misrepresent, and simple to buy.
@@ -19,9 +24,9 @@ That means:
 ### Elliott owns
 
 - Choose the final legal name, project name, ticker, and jurisdictional approach.
-- Speak with a crypto-aware attorney before making public sale, utility, yield, or investment claims.
-- Decide final tokenomics: total supply, allocation, tax, burn, minting, ownership, vesting, and liquidity policy.
-- Decide whether the project needs a company, foundation, or informal community structure.
+- Speak with a crypto-aware attorney before making public sale, utility, yield, or investment claims. A sole proprietorship with a DBA may be simple, but it does not remove crypto, tax, consumer-protection, securities, sanctions, or exchange-compliance risk.
+- Decide final tokenomics: total supply, allocation, tax, burn, minting, ownership, vesting, and liquidity policy. Tokenomics simply means the token's rules and numbers.
+- Start with Elliott as the owner if needed, but publish what the owner wallet can do and consider a multisig as soon as the project has real treasury or liquidity risk.
 
 ### Cursor can build
 
@@ -42,6 +47,7 @@ That means:
 
 - Use a widely reviewed ERC-20 implementation such as OpenZeppelin.
 - Avoid hidden mint functions, blacklist functions, transfer traps, or surprise taxes.
+- Prefer 0% buy tax and 0% sell tax unless there is a clear, published reason for fees.
 - If any taxes exist, publish exact rates and maximum limits.
 - If ownership remains active, use a multisig wallet and publish signer policy.
 - If ownership is renounced, explain what can and cannot be changed afterward.
@@ -66,6 +72,7 @@ That means:
 ### DEX path
 
 - Create or seed a liquidity pool on a reputable Polygon DEX.
+- With a few hundred dollars, start with a small proof-of-market pool and clearly warn that slippage can be high.
 - Publish the official swap link with the output token prefilled.
 - Show liquidity pool address, pair, and basic slippage guidance.
 - Track Dexscreener, GeckoTerminal, and other public chart pages once available.
@@ -115,6 +122,7 @@ That means:
 - Unverified exchange claims.
 - Multiple competing contract addresses.
 - Hidden ownership controls.
+- War hype, violent rhetoric, or pressure campaigns that exploit current events.
 
 ### Cursor can build
 
@@ -132,6 +140,7 @@ Elliott handles marketing, but marketing should point to verifiable facts:
 - Spaces or livestreams with transparent progress updates.
 - Contributor rewards for useful work, not spam.
 - Public milestone posts when legitimate listings, locks, audits, or integrations are complete.
+- Chat-room outreach only in rooms that allow project discussion, with no mass spam, fake urgency, or direct-message pressure.
 
 ## Immediate next build tasks for Cursor
 

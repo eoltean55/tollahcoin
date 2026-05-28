@@ -2,7 +2,11 @@
 
 Static landing page for tollahcoin, a Polygon community token.
 
-For the owner roadmap, see [`OWNER_ROADMAP.md`](OWNER_ROADMAP.md).
+For project planning, see:
+
+- [`OWNER_ROADMAP.md`](OWNER_ROADMAP.md): owner roadmap for making the coin verifiable, usable, and listing-ready.
+- [`TOKENOMICS_STARTER.md`](TOKENOMICS_STARTER.md): plain-English tokenomics and low-budget liquidity plan.
+- [`COMMUNITY_PLAYBOOK.md`](COMMUNITY_PLAYBOOK.md): X and chat-room outreach rules and templates.
 
 ## What helps this coin grow
 
