@@ -1,0 +1,9 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="256" fill="#07110D"/>
+  <circle cx="256" cy="256" r="226" fill="#10231B" stroke="#F8C941" stroke-width="14"/>
+  <path d="M101 218C133 151 190 114 256 114C322 114 379 151 411 218C379 195 324 182 256 182C188 182 133 195 101 218Z" fill="#35B86B"/>
+  <path d="M90 294C130 272 185 260 256 260C327 260 382 272 422 294C384 361 328 398 256 398C184 398 128 361 90 294Z" fill="#D64242"/>
+  <path d="M256 168L278 226L340 230L291 269L307 329L256 294L205 329L221 269L172 230L234 226L256 168Z" fill="#F8C941"/>
+  <circle cx="256" cy="256" r="82" stroke="#F5F1DF" stroke-width="10" stroke-dasharray="18 16"/>
+  <text x="256" y="454" text-anchor="middle" fill="#F5F1DF" font-family="Arial, sans-serif" font-size="52" font-weight="800" letter-spacing="6">$IRAN</text>
+</svg>
