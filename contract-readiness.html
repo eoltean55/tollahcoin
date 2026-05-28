@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="tollahcoin contract readiness checklist with tested fixed-supply ERC-20 properties and deployment steps.">
+  <meta name="theme-color" content="#101915">
+  <title>Contract readiness | tollahcoin $IRAN</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header>
+      <a class="brand" href="./" aria-label="tollahcoin home">
+        <img src="logo.svg" alt="tollahcoin logo">
+        <span>tollahcoin</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="./">Home</a>
+        <a href="buy.html">Buy guide</a>
+        <a href="tokenomics.html">Tokenomics</a>
+        <a href="transparency.html">Transparency</a>
+      </nav>
+    </header>
+
+    <main>
+      <p class="eyebrow">Contract readiness</p>
+      <h1>Test the contract before you market it.</h1>
+      <p class="lead">This checklist explains the fixed-supply ERC-20 package in this repo and what Elliott must confirm before deployment, verification, and promotion.</p>
+
+      <section aria-labelledby="package-title">
+        <h2 id="package-title">Repo package</h2>
+        <div class="grid">
+          <article class="panel">
+            <h3>Contract</h3>
+            <p>`contracts/Tollahcoin.sol` defines the starter OpenZeppelin ERC-20.</p>
+          </article>
+          <article class="panel">
+            <h3>Tests</h3>
+            <p>`test/Tollahcoin.t.sol` checks metadata, fixed supply, no-tax transfers, and zero treasury rejection.</p>
+          </article>
+          <article class="panel">
+            <h3>ABI check</h3>
+            <p>`scripts/verify-abi.js` rejects unexpected mint, pause, blacklist, or fee setter functions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="properties-title">
+        <h2 id="properties-title">Intended token properties</h2>
+        <div class="panel">
+          <div class="fact-list">
+            <div class="fact"><span>Fixed supply</span><strong>1,000,000,000 IRAN</strong></div>
+            <div class="fact"><span>Decimals</span><strong>18</strong></div>
+            <div class="fact"><span>Buy / sell tax</span><strong>0% / 0%</strong></div>
+            <div class="fact"><span>Extra minting</span><strong>No owner-only mint function</strong></div>
+            <div class="fact"><span>Transfer controls</span><strong>No pause or blacklist function</strong></div>
+            <div class="fact"><span>Treasury</span><strong>Initial supply goes to constructor treasury address</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="deployment-title">
+        <h2 id="deployment-title">Before deployment</h2>
+        <div class="grid">
+          <article class="panel">
+            <h3>1. Choose treasury</h3>
+            <p>Pick the wallet that receives the full initial supply and keep it separate from unrelated personal funds.</p>
+          </article>
+          <article class="panel">
+            <h3>2. Run tests</h3>
+            <p>Run `npm test` and keep the passing output with the deployment records.</p>
+          </article>
+          <article class="panel">
+            <h3>3. Verify source</h3>
+            <p>Verify on PolygonScan with Solidity `0.8.28`, optimizer enabled, and `200` optimizer runs.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="records-title">
+        <div class="callout warning">
+          <h2 id="records-title">Records to keep</h2>
+          <p>Save deployer address, treasury address, network, contract address, transaction hash, and exact commit hash. Do not claim deployed, verified, no-tax, fixed-supply, or exchange-ready status until live links prove it.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Contract facts must match the deployed and verified Polygon contract.</p>
+    </footer>
+  </div>
+</body>
+</html>

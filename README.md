@@ -14,6 +14,7 @@ Public site pages:
 - [`buy.html`](buy.html): buyer-facing Polygon swap guide and risk notes.
 - [`tokenomics.html`](tokenomics.html): starter tokenomics disclosure page.
 - [`transparency.html`](transparency.html): contract, liquidity, metadata, and exchange-readiness checklist.
+- [`contract-readiness.html`](contract-readiness.html): public contract properties and deployment checklist.
 - [`token-metadata.json`](token-metadata.json): starter metadata for wallet and token-list submissions.
 
 ## What helps this coin grow
