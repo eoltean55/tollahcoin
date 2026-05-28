@@ -1,129 +1,612 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>tollahcoin ($IRAN)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="tollahcoin ($IRAN) is a community token on Polygon built around identity, culture, and transparent grassroots growth.">
+  <meta property="og:title" content="tollahcoin ($IRAN)">
+  <meta property="og:description" content="A community-first Polygon token with clear contract links, roadmap, and launch checklist.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#101915">
+  <title>tollahcoin ($IRAN) | Polygon Community Token</title>
   <style>
+    :root {
+      --bg: #07110d;
+      --panel: rgba(13, 28, 22, 0.86);
+      --panel-strong: #10231b;
+      --text: #f5f1df;
+      --muted: #c8c0a5;
+      --gold: #f8c941;
+      --green: #35b86b;
+      --red: #d64242;
+      --line: rgba(248, 201, 65, 0.22);
+      --shadow: 0 20px 70px rgba(0, 0, 0, 0.36);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #eee;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(53, 184, 107, 0.22), transparent 34rem),
+        radial-gradient(circle at 85% 8%, rgba(248, 201, 65, 0.20), transparent 28rem),
+        linear-gradient(135deg, #050806 0%, var(--bg) 48%, #150808 100%);
+      color: var(--text);
       margin: 0;
-      padding: 0;
+      min-height: 100vh;
+      line-height: 1.6;
     }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
     header {
-      background: #000;
-      text-align: center;
-      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      gap: 24px;
     }
-    header img {
-      height: 120px;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(248, 201, 65, 0.2);
     }
-    header h1 {
-      text-transform: lowercase;
-      font-size: 2.5rem;
-      margin: 1rem 0 0;
+
+    .brand span {
+      display: block;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      font-size: 1.25rem;
     }
-    .intro {
-      text-align: center;
-      padding: 1rem;
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
+
+    nav {
+      display: flex;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 0.94rem;
     }
-    .token-info {
-      background: #1c1c1c;
-      padding: 2rem;
-      margin: 2rem auto;
-      border-radius: 10px;
-      max-width: 600px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.6);
+
+    nav a {
+      text-decoration: none;
     }
-    .token-info h2 {
-      text-align: center;
-      margin-bottom: 1rem;
+
+    nav a:hover {
+      color: var(--gold);
     }
-    .token-info p {
-      font-size: 1rem;
-      margin: 0.5rem 0;
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      gap: 40px;
+      align-items: center;
+      min-height: calc(100vh - 112px);
+      padding: 42px 0 72px;
     }
-    .copy-btn {
-      background: #ffcc00;
+
+    .eyebrow {
+      color: var(--gold);
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.76rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(3.2rem, 9vw, 7.5rem);
+      line-height: 0.88;
+      letter-spacing: -0.08em;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .hero-copy {
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2vw, 1.32rem);
+      max-width: 720px;
+    }
+
+    .hero-actions,
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button,
+    button {
+      appearance: none;
       border: none;
-      color: #111;
-      padding: 0.5rem 1rem;
-      margin-top: 1rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 20px;
+      font-weight: 800;
+      text-decoration: none;
       cursor: pointer;
-      font-weight: bold;
-      border-radius: 6px;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
     }
-    .roadmap {
-      background: #222;
-      color: #eee;
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+
+    .button:hover,
+    button:hover {
+      transform: translateY(-2px);
     }
-    .roadmap h2 {
-      text-align: center;
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--gold), #ffef99);
+      color: #151105;
+      box-shadow: 0 16px 30px rgba(248, 201, 65, 0.22);
     }
-    .roadmap ul {
-      list-style-type: none;
-      padding: 0;
+
+    .button-secondary,
+    button.button-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      border: 1px solid var(--line);
     }
-    .roadmap li {
-      padding: 1rem;
-      border-left: 4px solid #ffcc00;
-      margin: 1rem 0;
-      background: #1a1a1a;
+
+    .token-card,
+    .panel {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)), var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: 30px;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
+
+    .token-card {
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .token-card::before {
+      content: "";
+      position: absolute;
+      inset: -140px -90px auto auto;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(214, 66, 66, 0.30), transparent 68%);
+      pointer-events: none;
+    }
+
+    .token-emblem {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .detail-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 14px;
+      color: var(--muted);
+    }
+
+    .detail strong {
+      color: var(--text);
+    }
+
+    .contract {
+      word-break: break-all;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      color: var(--gold);
+      font-size: 0.92rem;
+    }
+
+    .copy-status {
+      color: var(--green);
+      min-height: 1.5em;
+      margin: 14px 0 0;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 74px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .panel {
+      padding: 24px;
+    }
+
+    .panel p,
+    .panel li {
+      color: var(--muted);
+    }
+
+    .panel ul,
+    .panel ol {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .metric-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .metric {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 22px;
+      padding: 18px;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--gold);
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
       font-size: 0.9rem;
-      color: #666;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 22px;
+    }
+
+    .phase {
+      color: var(--gold);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.74rem;
+    }
+
+    .faq {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .disclaimer {
+      border-left: 4px solid var(--red);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      padding: 28px 0 40px;
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 840px) {
+      header,
+      nav {
+        align-items: flex-start;
+      }
+
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .hero,
+      .grid,
+      .metric-strip,
+      .faq {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 18px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
     }
   </style>
-  <script>
-    function copyAddress() {
-      navigator.clipboard.writeText("0x414E4A5E3b35a25E020f14c27546724856b10f7B");
-      alert("Contract address copied to clipboard!");
-    }
-  </script>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="tollahcoin logo">
-    <h1>tollahcoin</h1>
-  </header>
+  <div class="page-shell">
+    <header>
+      <a class="brand" href="#top" aria-label="tollahcoin home">
+        <img src="logo.svg" alt="tollahcoin logo">
+        <span>tollahcoin</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#buy">How to buy</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#checklist">Growth checklist</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
 
-  <div class="intro">
-    <p>$IRAN is the token of cultural defiance. A bold statement in support of Iranian identity and resistance. Built for those who stand firm, even when the world turns its back.</p>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Polygon community token</p>
+          <h1 id="hero-title">tollahcoin $IRAN</h1>
+          <p class="hero-copy">$IRAN is a culture-first community token for people who want a sharper, louder, and more transparent digital home for Iranian identity, memes, and on-chain participation.</p>
+          <div class="hero-actions" aria-label="Token actions">
+            <a class="button button-primary" href="https://quickswap.exchange/#/swap?outputCurrency=0x414E4A5E3b35a25E020f14c27546724856b10f7B" target="_blank" rel="noopener noreferrer">Open QuickSwap</a>
+            <a class="button button-secondary" href="https://polygonscan.com/token/0x414E4A5E3b35a25E020f14c27546724856b10f7B" target="_blank" rel="noopener noreferrer">View contract</a>
+          </div>
+        </div>
+
+        <aside class="token-card" aria-labelledby="token-details-title">
+          <img class="token-emblem" src="logo.svg" alt="" aria-hidden="true">
+          <p class="eyebrow">Live token details</p>
+          <h2 id="token-details-title">Built on Polygon.</h2>
+          <p>Fast settlement, low fees, and a contract address that is easy to verify before anyone swaps.</p>
+          <div class="detail-grid">
+            <div class="detail"><span>Name</span><strong>tollahcoin</strong></div>
+            <div class="detail"><span>Symbol</span><strong>IRAN</strong></div>
+            <div class="detail"><span>Chain</span><strong>Polygon</strong></div>
+            <div class="detail"><span>Contract</span><strong class="contract">0x414E4A5E3b35a25E020f14c27546724856b10f7B</strong></div>
+          </div>
+          <div class="card-actions">
+            <button class="button-secondary" type="button" data-copy-contract>Copy contract</button>
+            <a class="button button-secondary" href="https://twitter.com/intent/tweet?text=I%20found%20%24IRAN%20on%20Polygon%3A%200x414E4A5E3b35a25E020f14c27546724856b10f7B" target="_blank" rel="noopener noreferrer">Share $IRAN</a>
+          </div>
+          <p class="copy-status" aria-live="polite" data-copy-status></p>
+        </aside>
+      </section>
+
+      <section id="buy" aria-labelledby="buy-title">
+        <div class="section-heading">
+          <p class="eyebrow">Start clean</p>
+          <h2 id="buy-title">How to buy $IRAN</h2>
+          <p>Make the path simple, repeatable, and verifiable for new holders.</p>
+        </div>
+        <div class="grid">
+          <article class="panel">
+            <h3>1. Add Polygon</h3>
+            <p>Use a self-custody wallet that supports Polygon, then fund it with MATIC for gas and swap liquidity.</p>
+          </article>
+          <article class="panel">
+            <h3>2. Verify the contract</h3>
+            <p>Check the exact contract on PolygonScan before swapping. Never rely on screenshots or copied ticker names.</p>
+          </article>
+          <article class="panel">
+            <h3>3. Swap on a DEX</h3>
+            <p>Open QuickSwap, paste the verified contract, review price impact, then confirm only if the numbers make sense.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="why-title">
+        <div class="section-heading">
+          <p class="eyebrow">Why this can grow</p>
+          <h2 id="why-title">Give people a reason to stay.</h2>
+          <p>Coins take off when trust, culture, and repeatable community activity compound together.</p>
+        </div>
+        <div class="grid">
+          <article class="panel">
+            <h3>Identity</h3>
+            <p>A memorable ticker, clear visual system, and story that holders can explain in one sentence.</p>
+          </article>
+          <article class="panel">
+            <h3>Transparency</h3>
+            <p>Direct contract links, public milestones, and plain-language risk notes make the project easier to share.</p>
+          </article>
+          <article class="panel">
+            <h3>Momentum</h3>
+            <p>Weekly meme prompts, holder votes, contests, and listings give the community reasons to return.</p>
+          </article>
+        </div>
+        <div class="metric-strip" aria-label="Growth focus areas">
+          <div class="metric"><strong>01</strong><span>Contract verification</span></div>
+          <div class="metric"><strong>02</strong><span>Liquidity visibility</span></div>
+          <div class="metric"><strong>03</strong><span>Community channels</span></div>
+          <div class="metric"><strong>04</strong><span>Listing applications</span></div>
+        </div>
+      </section>
+
+      <section id="roadmap" aria-labelledby="roadmap-title">
+        <div class="section-heading">
+          <p class="eyebrow">Roadmap</p>
+          <h2 id="roadmap-title">A public path beats vague hype.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="phase">Phase 1</div>
+            <div>
+              <h3>Genesis</h3>
+              <p>Launch on Polygon, publish the verified contract, establish the brand kit, and seed early liquidity.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="phase">Phase 2</div>
+            <div>
+              <h3>Awareness</h3>
+              <p>Coordinate meme drops, creator outreach, X spaces, and submissions to token trackers once volume and liquidity data are ready.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="phase">Phase 3</div>
+            <div>
+              <h3>Community utility</h3>
+              <p>Run holder votes, airdrop campaigns, public contests, and limited cultural collectibles chosen by the community.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="phase">Phase 4</div>
+            <div>
+              <h3>Expansion</h3>
+              <p>Apply for CoinGecko, CoinMarketCap, wallet metadata, and broader DEX visibility after the public checklist is complete.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="checklist" aria-labelledby="checklist-title">
+        <div class="section-heading">
+          <p class="eyebrow">What to do next</p>
+          <h2 id="checklist-title">Launch checklist for credibility.</h2>
+          <p>These are the practical steps that make the token easier to trust and easier to share.</p>
+        </div>
+        <div class="grid">
+          <article class="panel">
+            <h3>Trust</h3>
+            <ul>
+              <li>Verify source code on PolygonScan.</li>
+              <li>Publish supply, tax, owner, and liquidity details.</li>
+              <li>Share a single official contract everywhere.</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <h3>Distribution</h3>
+            <ul>
+              <li>Create official X, Telegram, and Discord links.</li>
+              <li>Pin a buy guide with the contract address.</li>
+              <li>Submit logo and metadata to wallets and token lists.</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <h3>Community</h3>
+            <ul>
+              <li>Run weekly meme and culture prompts.</li>
+              <li>Publish holder milestones and roadmap progress.</li>
+              <li>Reward useful contributors, not empty spam.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Clear answers reduce friction.</h2>
+        </div>
+        <div class="faq">
+          <article class="panel">
+            <h3>Is this financial advice?</h3>
+            <p>No. $IRAN is a high-risk community token. Do your own research and only use funds you can afford to lose.</p>
+          </article>
+          <article class="panel">
+            <h3>Where should people verify it?</h3>
+            <p>PolygonScan is the source of truth for contract activity, holders, transfers, and verified source code when published.</p>
+          </article>
+          <article class="panel">
+            <h3>What helps the coin grow?</h3>
+            <p>Consistent community activity, public transparency, clear links, liquidity visibility, and honest communication.</p>
+          </article>
+          <article class="panel disclaimer">
+            <h3>Risk reminder</h3>
+            <p>Crypto assets are volatile. Listings, liquidity, and market interest are never guaranteed.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span data-year></span> tollahcoin. Built on Polygon for community, culture, and transparent participation.</p>
+    </footer>
   </div>
 
-  <div class="token-info">
-    <h2>Token Details</h2>
-    <p><strong>Name:</strong> tollahcoin</p>
-    <p><strong>Symbol:</strong> IRAN</p>
-    <p><strong>Chain:</strong> Polygon</p>
-    <p><strong>Contract:</strong> 0x414E4A5E3b35a25E020f14c27546724856b10f7B</p>
-    <button class="copy-btn" onclick="copyAddress()">📋 Copy Address</button>
-  </div>
+  <script>
+    const contractAddress = "0x414E4A5E3b35a25E020f14c27546724856b10f7B";
+    const copyButton = document.querySelector("[data-copy-contract]");
+    const copyStatus = document.querySelector("[data-copy-status]");
+    const year = document.querySelector("[data-year]");
 
-  <div class="roadmap">
-    <h2>Roadmap</h2>
-    <ul>
-      <li><strong>Phase 1 – Genesis</strong>: Launch tollahcoin on Polygon. Establish identity. Get listed on QuickSwap.</li>
-      <li><strong>Phase 2 – Awareness</strong>: Social campaigns, Twitter growth, meme waves. Apply to CoinGecko and TrustWallet.</li>
-      <li><strong>Phase 3 – Expansion</strong>: Community contests, DAO voting, airdrops, and limited NFT drops representing Iranian symbols.</li>
-    </ul>
-  </div>
+    year.textContent = new Date().getFullYear();
 
-  <footer>
-    &copy; 2025 tollahcoin. Built on-chain for the people.
-  </footer>
+    copyButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(contractAddress);
+        copyStatus.textContent = "Contract copied.";
+      } catch (error) {
+        copyStatus.textContent = contractAddress;
+      }
+    });
+  </script>
 </body>
 </html>
