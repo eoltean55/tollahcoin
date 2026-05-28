@@ -2,6 +2,8 @@
 
 Static landing page for tollahcoin, a Polygon community token.
 
+For the owner roadmap, see [`OWNER_ROADMAP.md`](OWNER_ROADMAP.md).
+
 ## What helps this coin grow
 
 The most useful next moves are credibility and repeatable community activity:
