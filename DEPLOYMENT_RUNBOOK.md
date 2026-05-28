@@ -90,6 +90,12 @@ Then run:
 npm run update:site:contract
 ```
 
+Preview the update without writing files:
+
+```sh
+DRY_RUN=true npm run update:site:contract
+```
+
 Review the diff before committing.
 
 ## 7. Create the first liquidity pool

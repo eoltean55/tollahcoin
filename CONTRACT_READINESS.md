@@ -6,7 +6,7 @@ This repo now includes a starter ERC-20 contract for tollahcoin:
 - Tests: `test/Tollahcoin.t.sol`
 - ABI check: `scripts/verify-abi.js`
 - Deployment script: `scripts/deploy-polygon.js`
-- Site update script: `scripts/update-site-after-deploy.js`
+- Site update script: `scripts/update-site-after-deploy.js` with `DRY_RUN=true` preview support
 
 ## Intended token properties
 

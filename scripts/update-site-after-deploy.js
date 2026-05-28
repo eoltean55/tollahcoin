@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { isAddress } from "viem";
 
 const contractAddress = process.env.TOKEN_CONTRACT_ADDRESS;
+const dryRun = process.env.DRY_RUN === "true";
 
 if (!contractAddress || !isAddress(contractAddress)) {
   throw new Error("Set TOKEN_CONTRACT_ADDRESS to the deployed Polygon token address");
@@ -26,7 +27,7 @@ for (const file of filesToUpdate) {
     .replace(/https:\/\/polygonscan\.com\/token\/0x[a-fA-F0-9]{40}/g, explorerTokenUrl)
     .replace(/https:\/\/quickswap\.exchange\/#\/swap\?outputCurrency=0x[a-fA-F0-9]{40}/g, quickswapUrl);
 
-  if (updated !== original) {
+  if (updated !== original && !dryRun) {
     writeFileSync(file, updated);
   }
 }
@@ -43,7 +44,9 @@ if (process.env.PUBLIC_SITE_URL) {
   metadata.logoURI = `${process.env.PUBLIC_SITE_URL.replace(/\/$/, "")}/logo.svg`;
 }
 
-writeFileSync(metadataPath, `${JSON.stringify(metadata, null, 2)}\n`);
+if (!dryRun) {
+  writeFileSync(metadataPath, `${JSON.stringify(metadata, null, 2)}\n`);
+}
 
-console.log(`Updated site files for ${contractAddress}`);
+console.log(`${dryRun ? "Dry run completed for" : "Updated site files for"} ${contractAddress}`);
 console.log(`Explorer: ${explorerTokenUrl}`);
