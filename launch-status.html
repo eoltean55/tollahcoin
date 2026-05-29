@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Human-readable tollahcoin launch status with completed, blocked, and not-yet-claimable items.">
+  <meta name="theme-color" content="#101915">
+  <title>Launch status | tollahcoin $IRAN</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header>
+      <a class="brand" href="./" aria-label="tollahcoin home">
+        <img src="logo.svg" alt="tollahcoin logo">
+        <span>tollahcoin</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="./">Home</a>
+        <a href="buy.html">Buy guide</a>
+        <a href="tokenomics.html">Tokenomics</a>
+        <a href="transparency.html">Transparency</a>
+        <a href="contract-readiness.html">Contract readiness</a>
+        <a href="exchange-data-room.html">Exchange data room</a>
+        <a href="policies.html">Policies</a>
+        <a href="launch-readiness.html">Launch readiness</a>
+      </nav>
+    </header>
+
+    <main>
+      <p class="eyebrow">Launch status details</p>
+      <h1>Prepared, blocked, and not claimable yet.</h1>
+      <p class="lead">This page mirrors `launch-status.json` in a human-readable format for holders, reviewers, and Elliott.</p>
+
+      <section aria-labelledby="completed-title">
+        <h2 id="completed-title">Completed</h2>
+        <div class="grid">
+          <article class="panel"><h3>Contract package</h3><p>Fixed-supply OpenZeppelin ERC-20 contract and Solidity tests are in the repo.</p></article>
+          <article class="panel"><h3>Quality gate</h3><p>Local check: `npm run check:all`.</p></article>
+          <article class="panel"><h3>Deployment tooling</h3><p>Polygon deployment and post-deploy site update scripts are prepared.</p></article>
+          <article class="panel"><h3>Public docs</h3><p>Buy guide, tokenomics, transparency, contract readiness, policies, and exchange data-room pages are prepared.</p></article>
+          <article class="panel"><h3>Data room</h3><p>Structured exchange application packet and token metadata starter are prepared.</p></article>
+        </div>
+      </section>
+
+      <section aria-labelledby="blocked-title">
+        <h2 id="blocked-title">Blocked</h2>
+        <div class="grid">
+          <article class="panel"><h3>Live deployment</h3><p>Needs funded deployment wallet, Polygon RPC URL, and treasury wallet.</p></article>
+          <article class="panel"><h3>Contract verification</h3><p>Needs live deployed contract address and PolygonScan verification.</p></article>
+          <article class="panel"><h3>Liquidity</h3><p>Needs first DEX pool, pair asset, pool address, and liquidity disclosure.</p></article>
+          <article class="panel"><h3>Official channels</h3><p>Needs official website URL, project email, X, Telegram, and Discord.</p></article>
+          <article class="panel"><h3>Legal/compliance</h3><p>Needs qualified legal/tax review before major promotions or centralized exchange outreach.</p></article>
+        </div>
+      </section>
+
+      <section aria-labelledby="claims-title">
+        <div class="callout warning">
+          <h2 id="claims-title">Do not claim yet</h2>
+          <p>Live deployed token, PolygonScan verified source, locked liquidity, audit completed, exchange listing confirmed, guaranteed safety, or guaranteed returns.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="json-title">
+        <h2 id="json-title">Machine-readable source</h2>
+        <div class="panel">
+          <div class="fact-list">
+            <div class="fact"><span>JSON status</span><strong><a href="launch-status.json" target="_blank" rel="noopener noreferrer">launch-status.json</a></strong></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Keep this page synchronized with `launch-status.json`.</p>
+    </footer>
+  </div>
+</body>
+</html>

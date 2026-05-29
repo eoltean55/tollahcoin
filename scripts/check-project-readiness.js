@@ -16,6 +16,7 @@ const requiredFiles = [
   "data-room/exchange-application.json",
   "token-metadata.json",
   "launch-status.json",
+  "launch-status.html",
   "buy.html",
   "tokenomics.html",
   "transparency.html",

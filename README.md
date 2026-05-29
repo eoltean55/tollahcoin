@@ -23,6 +23,7 @@ Public site pages:
 - [`exchange-data-room.html`](exchange-data-room.html): public exchange data-room overview.
 - [`policies.html`](policies.html): public risk, treasury, and claims policies.
 - [`launch-readiness.html`](launch-readiness.html): public readiness dashboard.
+- [`launch-status.html`](launch-status.html): human-readable completed, blocked, and not-yet-claimable launch status.
 - [`token-metadata.json`](token-metadata.json): starter metadata for wallet and token-list submissions.
 - [`launch-status.json`](launch-status.json): machine-readable launch readiness status.
 

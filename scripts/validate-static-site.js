@@ -9,6 +9,7 @@ const pages = [
   "exchange-data-room.html",
   "policies.html",
   "launch-readiness.html",
+  "launch-status.html",
 ];
 
 const localHrefPattern = /(?:href|src)="([^"]+)"/g;
