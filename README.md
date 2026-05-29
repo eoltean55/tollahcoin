@@ -9,6 +9,7 @@ For project planning, see:
 - [`COMMUNITY_PLAYBOOK.md`](COMMUNITY_PLAYBOOK.md): X and chat-room outreach rules and templates.
 - [`CONTRACT_READINESS.md`](CONTRACT_READINESS.md): tested ERC-20 contract properties and deployment checklist.
 - [`DEPLOYMENT_RUNBOOK.md`](DEPLOYMENT_RUNBOOK.md): step-by-step Polygon deployment, verification, and site update process.
+- [`EXCHANGE_DATA_ROOM.md`](EXCHANGE_DATA_ROOM.md): exchange, wallet, and tracker data-room checklist.
 
 Public site pages:
 
@@ -16,6 +17,7 @@ Public site pages:
 - [`tokenomics.html`](tokenomics.html): starter tokenomics disclosure page.
 - [`transparency.html`](transparency.html): contract, liquidity, metadata, and exchange-readiness checklist.
 - [`contract-readiness.html`](contract-readiness.html): public contract properties and deployment checklist.
+- [`exchange-data-room.html`](exchange-data-room.html): public exchange data-room overview.
 - [`token-metadata.json`](token-metadata.json): starter metadata for wallet and token-list submissions.
 
 ## What helps this coin grow
@@ -48,6 +50,12 @@ Install dependencies, compile, run Solidity tests, and verify the ABI:
 ```sh
 npm install
 npm test
+```
+
+Run the full local quality gate with:
+
+```sh
+npm run check:all
 ```
 
 Prepare a Polygon deployment with:

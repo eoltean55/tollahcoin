@@ -9,6 +9,9 @@
     "verify:abi": "node scripts/verify-abi.js",
     "deploy:polygon": "npm run build:contracts && node scripts/deploy-polygon.js",
     "update:site:contract": "node scripts/update-site-after-deploy.js",
+    "validate:site": "node scripts/validate-static-site.js",
+    "readiness:check": "node scripts/check-project-readiness.js",
+    "check:all": "npm test && npm run validate:site && npm run readiness:check && npm audit --audit-level=high",
     "test": "npm run build:contracts && npm run test:contracts && npm run verify:abi"
   },
   "repository": {

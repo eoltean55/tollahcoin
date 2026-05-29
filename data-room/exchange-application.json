@@ -1,0 +1,54 @@
+{
+  "project": {
+    "name": "tollahcoin",
+    "website": "",
+    "description": "tollahcoin ($IRAN) is a Polygon community token built around culture, identity, transparent token details, and a verifiable buy path.",
+    "owner": "Elliott",
+    "contactEmail": "",
+    "officialSocials": {
+      "x": "",
+      "telegram": "",
+      "discord": ""
+    }
+  },
+  "token": {
+    "name": "tollahcoin",
+    "symbol": "IRAN",
+    "contractAddress": "0x414E4A5E3b35a25E020f14c27546724856b10f7B",
+    "decimals": 18,
+    "totalSupply": "1000000000",
+    "standard": "ERC-20",
+    "implementation": "OpenZeppelin ERC-20",
+    "buyTaxPercent": 0,
+    "sellTaxPercent": 0,
+    "postLaunchMinting": false,
+    "pauseFunction": false,
+    "blacklistFunction": false
+  },
+  "network": {
+    "name": "Polygon",
+    "chainId": 137,
+    "explorer": "https://polygonscan.com/token/0x414E4A5E3b35a25E020f14c27546724856b10f7B"
+  },
+  "liquidity": {
+    "dex": "",
+    "pairAsset": "",
+    "poolAddress": "",
+    "initialLiquidityUsd": "",
+    "liquidityLock": "",
+    "chartLinks": []
+  },
+  "compliance": {
+    "legalStructure": "",
+    "jurisdiction": "",
+    "riskDisclosureUrl": "",
+    "prohibitedClaimsPolicy": "No guaranteed returns, no fake exchange claims, no fake liquidity claims, no crisis-pressure buying language.",
+    "notes": "Fill with qualified legal and tax guidance before centralized exchange outreach."
+  },
+  "repository": {
+    "contractPath": "contracts/Tollahcoin.sol",
+    "testCommand": "npm test",
+    "readinessCommand": "npm run readiness:check",
+    "deploymentRunbook": "DEPLOYMENT_RUNBOOK.md"
+  }
+}
