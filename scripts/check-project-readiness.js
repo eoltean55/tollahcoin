@@ -10,13 +10,19 @@ const requiredFiles = [
   "DEPLOYMENT_RUNBOOK.md",
   "CONTRACT_READINESS.md",
   "EXCHANGE_DATA_ROOM.md",
+  "RISK_DISCLOSURE.md",
+  "TREASURY_POLICY.md",
+  "PROHIBITED_CLAIMS_POLICY.md",
   "data-room/exchange-application.json",
   "token-metadata.json",
+  "launch-status.json",
   "buy.html",
   "tokenomics.html",
   "transparency.html",
   "contract-readiness.html",
   "exchange-data-room.html",
+  "policies.html",
+  "launch-readiness.html",
 ];
 
 const expectedPackageScripts = [
@@ -60,5 +66,12 @@ const exchangeApplication = JSON.parse(readFileSync("data-room/exchange-applicat
 assert(exchangeApplication.project.name === "tollahcoin", "exchange packet project name mismatch");
 assert(exchangeApplication.token.symbol === "IRAN", "exchange packet token symbol mismatch");
 assert(exchangeApplication.network.chainId === 137, "exchange packet chainId must be Polygon mainnet");
+
+const launchStatus = JSON.parse(readFileSync("launch-status.json", "utf8"));
+assert(launchStatus.project === "tollahcoin", "launch status project mismatch");
+assert(launchStatus.symbol === "IRAN", "launch status symbol mismatch");
+assert(launchStatus.status === "pre-deployment", "launch status should remain pre-deployment until live deploy");
+assert(launchStatus.blocked.length >= 3, "launch status must list blocked items");
+assert(launchStatus.doNotClaimYet.includes("Exchange listing confirmed"), "launch status must include listing claim warning");
 
 console.log("Project readiness check passed");

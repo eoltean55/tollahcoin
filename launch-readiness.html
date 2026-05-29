@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="tollahcoin launch readiness dashboard showing completed, blocked, and not-yet-claimable project facts.">
+  <meta name="theme-color" content="#101915">
+  <title>Launch readiness | tollahcoin $IRAN</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header>
+      <a class="brand" href="./" aria-label="tollahcoin home">
+        <img src="logo.svg" alt="tollahcoin logo">
+        <span>tollahcoin</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="./">Home</a>
+        <a href="buy.html">Buy guide</a>
+        <a href="tokenomics.html">Tokenomics</a>
+        <a href="transparency.html">Transparency</a>
+        <a href="contract-readiness.html">Contract readiness</a>
+        <a href="exchange-data-room.html">Exchange data room</a>
+        <a href="policies.html">Policies</a>
+        <a href="launch-readiness.html">Launch readiness</a>
+      </nav>
+    </header>
+
+    <main>
+      <p class="eyebrow">Launch readiness</p>
+      <h1>Status: pre-deployment.</h1>
+      <p class="lead">This dashboard keeps the project honest: it shows what Cursor has prepared, what Elliott still needs to provide, and what nobody should claim yet.</p>
+
+      <section aria-labelledby="complete-title">
+        <h2 id="complete-title">Prepared</h2>
+        <div class="grid">
+          <article class="panel">
+            <h3>Contract package</h3>
+            <p>Fixed-supply ERC-20 contract, Solidity tests, ABI verification, and deployment tooling.</p>
+          </article>
+          <article class="panel">
+            <h3>Public docs</h3>
+            <p>Buy guide, tokenomics, transparency, contract readiness, policies, and exchange data room.</p>
+          </article>
+          <article class="panel">
+            <h3>Quality gate</h3>
+            <p>Run `npm run check:all` for contracts, ABI, static site, readiness, and dependency audit.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="blocked-title">
+        <h2 id="blocked-title">Blocked until Elliott provides</h2>
+        <div class="grid">
+          <article class="panel">
+            <h3>Wallets and RPC</h3>
+            <p>Funded deployment wallet, Polygon RPC URL, and treasury wallet address.</p>
+          </article>
+          <article class="panel">
+            <h3>Live market facts</h3>
+            <p>Deployed contract address, PolygonScan verification, first DEX pool, liquidity details, and chart links.</p>
+          </article>
+          <article class="panel">
+            <h3>Official operations</h3>
+            <p>Official website URL, project email, socials, treasury policy confirmation, and legal/tax review.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="claims-title">
+        <div class="callout warning">
+          <h2 id="claims-title">Do not claim yet</h2>
+          <p>Do not claim live deployment, PolygonScan verification, locked liquidity, audit completion, exchange listing, guaranteed safety, or guaranteed returns until public links prove those facts.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="machine-title">
+        <h2 id="machine-title">Machine-readable status</h2>
+        <div class="panel">
+          <div class="fact-list">
+            <div class="fact"><span>Launch status</span><strong><a href="launch-status.json" target="_blank" rel="noopener noreferrer">launch-status.json</a></strong></div>
+            <div class="fact"><span>Readiness check</span><strong>`npm run readiness:check`</strong></div>
+            <div class="fact"><span>Full quality gate</span><strong>`npm run check:all`</strong></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Update this dashboard whenever deployment, liquidity, or official channels change.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -10,6 +10,9 @@ For project planning, see:
 - [`CONTRACT_READINESS.md`](CONTRACT_READINESS.md): tested ERC-20 contract properties and deployment checklist.
 - [`DEPLOYMENT_RUNBOOK.md`](DEPLOYMENT_RUNBOOK.md): step-by-step Polygon deployment, verification, and site update process.
 - [`EXCHANGE_DATA_ROOM.md`](EXCHANGE_DATA_ROOM.md): exchange, wallet, and tracker data-room checklist.
+- [`RISK_DISCLOSURE.md`](RISK_DISCLOSURE.md): buyer and communication risk disclosures.
+- [`TREASURY_POLICY.md`](TREASURY_POLICY.md): starter treasury and liquidity controls.
+- [`PROHIBITED_CLAIMS_POLICY.md`](PROHIBITED_CLAIMS_POLICY.md): claims that should not be made without public proof.
 
 Public site pages:
 
@@ -18,7 +21,10 @@ Public site pages:
 - [`transparency.html`](transparency.html): contract, liquidity, metadata, and exchange-readiness checklist.
 - [`contract-readiness.html`](contract-readiness.html): public contract properties and deployment checklist.
 - [`exchange-data-room.html`](exchange-data-room.html): public exchange data-room overview.
+- [`policies.html`](policies.html): public risk, treasury, and claims policies.
+- [`launch-readiness.html`](launch-readiness.html): public readiness dashboard.
 - [`token-metadata.json`](token-metadata.json): starter metadata for wallet and token-list submissions.
+- [`launch-status.json`](launch-status.json): machine-readable launch readiness status.
 
 ## What helps this coin grow
 

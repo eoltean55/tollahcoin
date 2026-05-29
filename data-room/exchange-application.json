@@ -41,7 +41,9 @@
   "compliance": {
     "legalStructure": "",
     "jurisdiction": "",
-    "riskDisclosureUrl": "",
+    "riskDisclosureUrl": "RISK_DISCLOSURE.md",
+    "treasuryPolicyUrl": "TREASURY_POLICY.md",
+    "prohibitedClaimsPolicyUrl": "PROHIBITED_CLAIMS_POLICY.md",
     "prohibitedClaimsPolicy": "No guaranteed returns, no fake exchange claims, no fake liquidity claims, no crisis-pressure buying language.",
     "notes": "Fill with qualified legal and tax guidance before centralized exchange outreach."
   },

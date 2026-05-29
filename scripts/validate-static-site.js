@@ -7,10 +7,21 @@ const pages = [
   "transparency.html",
   "contract-readiness.html",
   "exchange-data-room.html",
+  "policies.html",
+  "launch-readiness.html",
 ];
 
 const localHrefPattern = /(?:href|src)="([^"]+)"/g;
-const requiredNavLabels = ["Home", "Buy guide", "Tokenomics", "Transparency", "Contract readiness", "Exchange data room"];
+const requiredNavLabels = [
+  "Home",
+  "Buy guide",
+  "Tokenomics",
+  "Transparency",
+  "Contract readiness",
+  "Exchange data room",
+  "Policies",
+  "Launch readiness",
+];
 
 function isExternal(reference) {
   return /^(https?:|mailto:|tel:|#)/.test(reference);
