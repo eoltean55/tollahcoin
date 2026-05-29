@@ -1,0 +1,59 @@
+{
+  "project": "tollahcoin",
+  "symbol": "IRAN",
+  "network": "Polygon",
+  "updated": "2026-05-29",
+  "status": "pre-deployment",
+  "completed": [
+    {
+      "area": "Contract package",
+      "detail": "Fixed-supply OpenZeppelin ERC-20 contract and Solidity tests are in the repo."
+    },
+    {
+      "area": "Quality gate",
+      "detail": "Local check: npm run check:all."
+    },
+    {
+      "area": "Deployment tooling",
+      "detail": "Polygon deployment and post-deploy site update scripts are prepared."
+    },
+    {
+      "area": "Public docs",
+      "detail": "Buy guide, tokenomics, transparency, contract readiness, policies, and exchange data-room pages are prepared."
+    },
+    {
+      "area": "Data room",
+      "detail": "Structured exchange application packet and token metadata starter are prepared."
+    }
+  ],
+  "blocked": [
+    {
+      "area": "Live deployment",
+      "needs": "Funded deployment wallet, Polygon RPC URL, and treasury wallet."
+    },
+    {
+      "area": "Contract verification",
+      "needs": "Live deployed contract address and PolygonScan verification."
+    },
+    {
+      "area": "Liquidity",
+      "needs": "First DEX pool, pair asset, pool address, and liquidity disclosure."
+    },
+    {
+      "area": "Official channels",
+      "needs": "Official website URL, project email, X, Telegram, and Discord."
+    },
+    {
+      "area": "Legal/compliance",
+      "needs": "Qualified legal/tax review before major promotions or centralized exchange outreach."
+    }
+  ],
+  "doNotClaimYet": [
+    "Live deployed token",
+    "PolygonScan verified source",
+    "Locked liquidity",
+    "Audit completed",
+    "Exchange listing confirmed",
+    "Guaranteed safety or returns"
+  ]
+}

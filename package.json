@@ -1,0 +1,33 @@
+{
+  "name": "tollahcoin",
+  "version": "1.0.0",
+  "description": "Static landing page for tollahcoin, a Polygon community token.",
+  "type": "module",
+  "scripts": {
+    "build:contracts": "hardhat build",
+    "test:contracts": "hardhat test solidity",
+    "verify:abi": "node scripts/verify-abi.js",
+    "deploy:polygon": "npm run build:contracts && node scripts/deploy-polygon.js",
+    "update:site:contract": "node scripts/update-site-after-deploy.js",
+    "validate:site": "node scripts/validate-static-site.js",
+    "readiness:check": "node scripts/check-project-readiness.js",
+    "check:all": "npm test && npm run validate:site && npm run readiness:check && npm audit --audit-level=high",
+    "test": "npm run build:contracts && npm run test:contracts && npm run verify:abi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eoltean55/tollahcoin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/eoltean55/tollahcoin/issues"
+  },
+  "homepage": "https://github.com/eoltean55/tollahcoin#readme",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^5.6.1",
+    "hardhat": "^3.6.0",
+    "viem": "^2.51.3"
+  }
+}
