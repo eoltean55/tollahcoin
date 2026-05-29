@@ -45,6 +45,8 @@ nav,
 
 header {
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 24px;
   padding: 24px 0;
 }
@@ -68,10 +70,13 @@ header {
 }
 
 nav {
+  flex: 1 1 560px;
   flex-wrap: wrap;
   gap: 18px;
+  justify-content: flex-end;
   color: var(--muted);
   font-size: 0.94rem;
+  min-width: 0;
 }
 
 nav a,
@@ -228,6 +233,11 @@ footer {
   header {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  nav {
+    flex: 0 1 auto;
+    justify-content: flex-start;
   }
 
   .grid {
